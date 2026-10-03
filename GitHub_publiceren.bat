@@ -4,7 +4,7 @@ rem ==================================================================
 rem  FNK0104N-project naar GitHub zetten (openbaar)
 rem  Staat in: ...\Arduino\FNK0104N   -  dubbelklikken.
 rem  Stap 1 is een droogloop: je ziet eerst welke bestanden meegaan.
-rem  De repository bestaat al op github.com (leeg).
+rem  De repository bestaat al op github.com. Opnieuw draaien = wijzigingen uploaden.
 rem ==================================================================
 set "GHUSER=fvdschrier-creator"
 set "REPO=freenove-fnk0104n-esp32-s3-case-and-schematics"
@@ -38,9 +38,7 @@ git config user.email "%GE%"
 rem --- STAP 1: droogloop ---
 git add -A
 echo.
-echo ===== Bestanden in de eerste versie (al vastgelegd) =====
-git ls-tree -r --name-only HEAD 2>nul
-echo ===== Nieuwe of gewijzigde bestanden (nog niet vastgelegd) =====
+echo ===== Nieuwe of gewijzigde bestanden (droogloop) =====
 git status --short
 echo ==============================================================
 git ls-tree -r --name-only HEAD > "%LOG%" 2>nul
@@ -52,7 +50,9 @@ if errorlevel 2 goto :stop
 rem --- STAP 2: commit (alleen als er iets nieuws is) ---
 git diff --cached --quiet
 if not errorlevel 1 goto :geencommit
-git commit -q -m "Update: startmenu, Bin Maker, tests, behuizing en bouwgids" >> "%LOG%" 2>&1
+set "MSG=Update"
+set /p MSG=Korte omschrijving van de wijziging (Enter = Update): 
+git commit -q -m "%MSG%" >> "%LOG%" 2>&1
 :geencommit
 git log --oneline -3
 

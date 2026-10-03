@@ -2,6 +2,14 @@
 
 *Nederlandse versie: [README_NL.md](README_NL.md)*
 
+<p align="center">
+  <img src="images/photo_case_b_front.jpg" width="45%" alt="Case B with the FNK0104N, front">
+  <img src="images/photo_case_b_stand.jpg" width="45%" alt="Case B in the desk stand">
+</p>
+<p align="center">
+  <img src="images/render_parts.png" width="70%" alt="Printed parts (renders)">
+</p>
+
 Personal project around the **Freenove ESP32-S3 Display FNK0104N** (3.5", 320x480, capacitive touch):
 a start menu that launches programs from the SD card, a Tkinter tool that turns sketches into such programs,
 hardware tests, and a 3D-printed enclosure with a LiPo battery and UPS-style charging.
@@ -40,6 +48,8 @@ hardware tests, and a 3D-printed enclosure with a LiPo battery and UPS-style cha
 
 ### Enclosure, power and build guide
 
+![Layout case B](images/layout_case_b.png)
+
 * Enclosure for the 3.5" board (101.5 x 54.5 mm) in two versions:
   **case A** without step-up converter (106.5 x 90 x 22.1 mm) and **case B** with an MT3608 step-up (106.5 x 103 x 22.1 mm).
 * Screen flush with the lid, M3x8 screws in brass heat-set inserts, speaker with locating rim, snap hooks for the lid,
@@ -59,7 +69,7 @@ hardware tests, and a 3D-printed enclosure with a LiPo battery and UPS-style cha
 
 ## To do
 
-* Print case B and check the fit.
+* ~~Print case B and check the fit.~~ Done (3 Oct 2026): case B printed, fits.
 * Measure whether the UART 5V pin is a power input; locate STAT1/STAT2 on the charger module for the LEDs.
 * Charge test and final test on battery.
 
@@ -67,3 +77,9 @@ hardware tests, and a 3D-printed enclosure with a LiPo battery and UPS-style cha
 
 * The ES8311 audio driver (`es8311.*`) comes from the Freenove examples and is covered by its own licence.
 * Freenove documentation and examples: https://github.com/Freenove/Freenove_ESP32_S3_Display
+
+## Licence
+
+* 3D files (STL) and the build guide: **CC BY-SA 4.0**.
+* The desk stand (`Freenove_standaard.stl`) is a remix of
+  ["M5Stack simple stand" by hkawakami](https://makerworld.com/models/537572), CC BY-SA 4.0.

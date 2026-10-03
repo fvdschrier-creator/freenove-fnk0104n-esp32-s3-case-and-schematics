@@ -25,3 +25,6 @@ Thumbs.db
 desktop.ini
 .vscode/
 publiceren_log.txt
+
+# --- MakerWorld-uploadpakket (alleen lokaal) ---
+MakerWorld/

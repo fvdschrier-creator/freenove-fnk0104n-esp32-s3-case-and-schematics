@@ -2,6 +2,14 @@
 
 *English version: [README.md](README.md)*
 
+<p align="center">
+  <img src="images/photo_case_b_front.jpg" width="45%" alt="Kastje B met de FNK0104N, voorkant">
+  <img src="images/photo_case_b_stand.jpg" width="45%" alt="Kastje B in de standaard">
+</p>
+<p align="center">
+  <img src="images/render_parts.png" width="70%" alt="Te printen onderdelen (renders)">
+</p>
+
 Eigen project rond de **Freenove ESP32-S3 Display FNK0104N** (3,5", 320x480, capacitive touch):
 een startmenu dat programma's van de SD-kaart start, een Tkinter-hulpprogramma om die programma's te maken,
 hardwaretests en een 3D-geprinte behuizing met accu-UPS.
@@ -40,6 +48,8 @@ hardwaretests en een 3D-geprinte behuizing met accu-UPS.
 
 ### Behuizing, voeding en bouwgids
 
+![Indeling kastje B](images/layout_case_b.png)
+
 * Behuizing voor het 3,5"-bord (101,5 x 54,5 mm) in twee varianten:
   **kastje A** zonder step-up (106,5 x 90 x 22,1 mm) en **kastje B** met MT3608 step-up (106,5 x 103 x 22,1 mm).
 * Scherm gelijk met het deksel, M3x8-bouten in messing inserts, speaker met rand, klemhaakjes voor het deksel,
@@ -59,7 +69,7 @@ hardwaretests en een 3D-geprinte behuizing met accu-UPS.
 
 ## Nog te doen
 
-* Kastje B printen en de pasvorm controleren.
+* ~~Kastje B printen en de pasvorm controleren.~~ Gedaan (3 okt 2026): kastje B geprint, past.
 * Meten of de UART-5V-pen een voedingsingang is; STAT1/STAT2 op de laadmodule zoeken voor de leds.
 * Laadtest en eindtest op de accu.
 
@@ -67,3 +77,9 @@ hardwaretests en een 3D-geprinte behuizing met accu-UPS.
 
 * De ES8311-audiodriver (`es8311.*`) komt uit de voorbeelden van Freenove en valt onder hun eigen licentie.
 * Freenove-documentatie en voorbeelden: https://github.com/Freenove/Freenove_ESP32_S3_Display
+
+## Licentie
+
+* 3D-bestanden (STL) en de bouwgids: **CC BY-SA 4.0**.
+* De standaard (`Freenove_standaard.stl`) is een remix van
+  ["M5Stack simple stand" van hkawakami](https://makerworld.com/models/537572), CC BY-SA 4.0.
