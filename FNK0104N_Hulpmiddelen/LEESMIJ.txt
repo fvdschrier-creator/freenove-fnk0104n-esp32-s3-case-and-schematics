@@ -1,0 +1,47 @@
+FNK0104N Bin Maker 2.1 (02-10-2026)
+===================================
+
+Wat: maakt van een Arduino-programma een .bin die in het Startmenu van de
+Freenove FNK0104N gestart kan worden. Het originele programma blijft altijd
+ongewijzigd.
+
+Starten: dubbelklik Start_Bin_Maker.bat (of: python fnk0104n_bin_maker.py).
+
+GEWOON GEBRUIK: kies het originele programma en klik "Maak .bin".
+Dat doet stap A en stap B in een keer. Knop "? Help" in het programma
+legt alles uit. De stappen hieronder kunnen ook los (gevorderd);
+bij "Alleen stap B" waarschuwt het programma als het origineel na
+stap A gewijzigd is.
+
+Stap A - Voorbereiden (origineel -> _BIN-map)
+ 1. Kies het originele programma, bijv.
+    C:\Users\fvdsc\Arduino\FNK0104N\FNK0104N_Dashboard_v2_0
+ 2. De _BIN-map wordt automatisch ingevuld (..._BIN, ernaast)
+ 3. Maak _BIN-map. In die map komt een kopie met:
+    - <naam>_BIN.ino      (hoofdbestand, de IDE eist de mapnaam)
+    - partitions.csv      (startmenu-indeling van het flashgeheugen)
+    - startmenu_terug.cpp (BOOT 2 s vasthouden = terug naar het startmenu)
+    - LEES_EERST.txt      (deze map niet via USB uploaden)
+ Wijzig je later het origineel: stap A opnieuw (de _BIN-map wordt vervangen).
+
+Stap B - Bin maken (_BIN-map -> .bin)
+ 1. Kies een _BIN-map (na stap A al ingevuld)
+ 2. Naam in het startmenu wordt ingevuld (aan te passen)
+ 3. Eventueel "Ook kopieren naar de SD-kaart" aanzetten en de kaart kiezen
+ 4. Maak .bin. Resultaat:
+    - in de _BIN-map: <naam>.bin, <naam>_info.txt, compileer_log.txt
+    - kopie in FNK0104N\FNK0104N_Startmenu_SD\programmas
+    - eventueel op de SD-kaart in \programmas (md5 gecontroleerd)
+
+Compileren gebeurt met arduino-cli van de Arduino IDE, met dezelfde
+instellingen en libraries als de IDE (C:\Users\fvdsc\.arduinoIDE\
+arduino-cli.yaml). Tijdelijke bestanden staan in
+%LOCALAPPDATA%\fnk0104n_bin_maker.
+
+arduino-cli: wordt gezocht in de map van de Arduino IDE. Niet gevonden?
+Kies dan bij "arduino-cli" het bestand arduino-cli.exe uit
+...\Arduino IDE\resources\app\lib\backend\resources. De keuze wordt
+onthouden in fnk0104n_bin_maker.json naast dit script.
+
+Let op: het Startmenu zelf (FNK0104N_Startmenu_v0_2) maak je niet met dit
+hulpprogramma; dat upload je via USB in de Arduino IDE.

@@ -1,0 +1,11 @@
+# Startmenu-indeling FNK0104N (16 MB). nvs en otadata op dezelfde plek als
+# "16M Flash (3MB APP/9.9MB FATFS)", zodat WiFi en wachtwoorden bewaard blijven.
+# factory = startmenu (vast), ota_0/ota_1 = programma's, ffat = bestanden.
+# Name,   Type, SubType, Offset,   Size,     Flags
+nvs,      data, nvs,     0x9000,   0x5000,
+otadata,  data, ota,     0xe000,   0x2000,
+factory,  app,  factory, 0x10000,  0x180000,
+app0,     app,  ota_0,   0x190000, 0x300000,
+app1,     app,  ota_1,   0x490000, 0x300000,
+ffat,     data, fat,     0x790000, 0x860000,
+coredump, data, coredump,0xFF0000, 0x10000,

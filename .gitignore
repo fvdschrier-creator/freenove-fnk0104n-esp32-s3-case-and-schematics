@@ -1,0 +1,27 @@
+# --- Build-uitvoer en lokale bestanden (worden opnieuw gemaakt door Bin Maker) ---
+*.bin
+*_BIN/
+FNK0104N_Startmenu_SD/
+compileer_log.txt
+binmaker_bron.json
+FNK0104N_Hulpmiddelen/fnk0104n_bin_maker.json
+__pycache__/
+*.pyc
+
+# --- Dashboard (niet publiceren) ---
+FNK0104N_Dashboard*/
+
+# --- Generator-scripts van behuizing en bouwgids (niet publiceren) ---
+FKN0104N_Case/Bouwgids_v2_script.py
+FKN0104N_Case/Behuizing_v2_indeling_script.py
+FKN0104N_Case/STL_v2/stl_maker.py
+FKN0104N_Case/STL_v2/standaard_maker.py
+
+# --- Persoonlijke schermafbeeldingen ---
+FKN0104N_Case/Schermafbeelding*.png
+
+# --- Windows / editors ---
+Thumbs.db
+desktop.ini
+.vscode/
+publiceren_log.txt
